@@ -1,0 +1,2 @@
+export const UPDATE_MARKDOWN_TEXT = 'UPDATE_MARKDOWN_TEXT';
+export const SET_PREVIEW = 'SET_PREVIEW';

@@ -1,28 +1,53 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Editor from './components/Editor';
+import Previewer from './components/Previewer';
 import './App.css';
 
+import { connect } from 'react-redux';
+
+import marked from 'marked';
+
+import {
+  updateMarkdownText,
+  setPreview
+} from './actions';
+
 class App extends Component {
+
+  componentDidMount = () => {
+    this.props.setPreview();
+  }
+
+  updateEditor = (e) => {
+    this.props.updateMarkdownText(e.target.value);
+    //this.updatePreviewer();
+  }
+
+  updatePreviewer = () => {
+    document.getElementById('content').innerHTML =
+      this.props.myData.previewResult;
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Editor
+          updateEditor={this.updateEditor}
+          markdownText={this.props.myData.markdownText}
+        />
+        <Previewer previewResult={this.props.myData.previewResult}/>
       </div>
     );
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    myData: state.myData
+  }
+}
+
+export default connect(mapStateToProps, {
+  updateMarkdownText,
+  setPreview
+})(App);
