@@ -22,3 +22,12 @@ textarea {
   margin-top: 20px;
   padding: 10px;
 }
+
+pre {
+  background-color: yellow;
+  padding: 10px;
+}
+
+code {
+  background-color: yellow;
+}
