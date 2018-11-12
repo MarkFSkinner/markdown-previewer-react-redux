@@ -48,3 +48,22 @@ code {
   padding: 5px;
   font-weight: bold;
 }
+
+img {
+  max-width: 100%;
+}
+
+.title {
+  display: inline-block;
+  width: 50%;
+}
+
+.icon {
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+}
+
+i {
+  padding-right: 5px;
+}
