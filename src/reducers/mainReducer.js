@@ -12,11 +12,9 @@ const initialState = {
     "Here is a <a href='https://www.freecodecamp.com' target='_blank'>second link</a> that opens in a new tab!  \n" +
     "Here is some code, `<div><p>Hello There!</p></div>`. \n" +
     "```\n" +
-    "// this is multi-line code:\n" +
-    "function anotherExample(firstLine, lastLine) { \n" +
-    "  if (firstLine == '```' && lastLine == '```') { \n" +
-    "    return multiLineCode; \n" +
-    "  } \n" +
+    "// Here is some multi-line code:\n" +
+    "function sum(a, b) { \n" +
+    "  return a + b; \n" +
     "} \n" +
     "``` \n" +
     "- Here is a list \n" +
