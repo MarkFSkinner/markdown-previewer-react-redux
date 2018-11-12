@@ -6,8 +6,26 @@ import {
 } from '../actions/types';
 
 const initialState = {
-  markdownText: "# Welcome to my React Markdown Previewer! \n" +
-    "## This is a sub-heading..."
+  markdownText: "# This is a Header! \n" +
+    "## This is a sub-heading... \n" +
+    "Here is a [link](https://www.freecodecamp.com)  \n" +
+    "Here is a <a href='https://www.freecodecamp.com' target='_blank'>second link</a> that opens in a new tab!  \n" +
+    "Here is some code, `<div><p>Hello There!</p></div>`. \n" +
+    "```\n" +
+    "// this is multi-line code:\n" +
+    "function anotherExample(firstLine, lastLine) { \n" +
+    "  if (firstLine == '```' && lastLine == '```') { \n" +
+    "    return multiLineCode; \n" +
+    "  } \n" +
+    "} \n" +
+    "``` \n" +
+    "- Here is a list \n" +
+    "  - Here is a list item \n" +
+    "   - Here is another \n" +
+    "   - and another \n\n" +
+    "> This is a Block Quote! \n\n" +
+    "![React Logo w/ Text](https://goo.gl/Umyytc) \n\n" +
+    "Here is **BOLDED** text! \n"
 };
 
 export default function(state = initialState, action) {

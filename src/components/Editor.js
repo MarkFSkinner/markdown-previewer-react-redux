@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Editor = props => (
-  <div>
-    <textarea type='text' onChange={props.updateEditor} value={props.markdownText}></textarea>
+  <div id='editorwrap'>
+    <textarea id='editor' type='text' onChange={props.updateEditor} value={props.markdownText}></textarea>
   </div>
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Previewer = props => (
-  <div id='content' dangerouslySetInnerHTML={{__html: props.previewResult}}></div>
+  <div id='preview' dangerouslySetInnerHTML={{__html: props.previewResult}}></div>
 );
 
 

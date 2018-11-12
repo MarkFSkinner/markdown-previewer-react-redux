@@ -30,7 +30,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         <Editor
           updateEditor={this.updateEditor}
           markdownText={this.props.myData.markdownText}
