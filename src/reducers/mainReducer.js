@@ -2,7 +2,12 @@ import marked from 'marked';
 
 import {
   UPDATE_MARKDOWN_TEXT,
-  SET_PREVIEW
+  SET_PREVIEW,
+  UPDATE_EDITOR_VIEWCLASS,
+  UPDATE_PREVIEW_VIEWCLASS,
+  UPDATE_EDITOR_HIDDEN,
+  UPDATE_PREVIEW_HIDDEN,
+  UPDATE_ICON
 } from '../actions/types';
 
 const initialState = {
@@ -23,7 +28,12 @@ const initialState = {
     "   - and another \n\n" +
     "> This is a Block Quote! \n\n" +
     "![React Logo w/ Text](https://goo.gl/Umyytc) \n\n" +
-    "Here is **BOLDED** text! \n"
+    "Here is **BOLDED** text! \n",
+    editorViewClass: 'normal',
+    previewViewClass: 'normal',
+    editorHidden: '',
+    previewHidden: '',
+    icon: 'icon-fullscreen'
 };
 
 export default function(state = initialState, action) {
@@ -38,6 +48,31 @@ export default function(state = initialState, action) {
       return {
         ...state,
         previewResult: marked(state.markdownText)
+      }
+    case UPDATE_EDITOR_VIEWCLASS:
+      return {
+        ...state,
+        editorViewClass: action.payload
+      }
+    case UPDATE_PREVIEW_VIEWCLASS:
+      return {
+        ...state,
+        previewViewClass: action.payload
+      }
+    case UPDATE_EDITOR_HIDDEN:
+      return {
+        ...state,
+        editorHidden: action.payload
+      }
+    case UPDATE_PREVIEW_HIDDEN:
+      return {
+        ...state,
+        previewHidden: action.payload
+      }
+    case UPDATE_ICON:
+      return {
+        ...state,
+        icon: action.payload
       }
     default:
       return state;

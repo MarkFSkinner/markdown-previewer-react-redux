@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Editor = props => (
-  <div id='editor_wrap'>
+  <div id='editor_wrap' className={`${props.editorViewClass} ${props.editorHidden}`}>
     <div className='toolbar'>
       <div className='title'>Editor</div>
       <div className='icon'>
-        <i className="icon-fullscreen"></i>
+        <i onClick={props.toggleEditorFullscreen} className={props.icon}></i>
       </div>
     </div>
     <textarea id='editor' type='text' onChange={props.updateEditor} value={props.markdownText}></textarea>
