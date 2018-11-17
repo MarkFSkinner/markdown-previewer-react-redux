@@ -17,6 +17,10 @@ import {
   updateIcon
 } from './actions';
 
+marked.setOptions({
+  breaks: true,
+});
+
 class App extends Component {
 
   componentDidMount = () => {
@@ -61,7 +65,9 @@ class App extends Component {
     this.props.updatePreviewHidden(result);
   }*/
 
-
+  /*replace = (text) => {
+    text.replace(/\r/gi, "<br>");
+  }*/
 
   render() {
     return (
