@@ -11,24 +11,27 @@ import {
 } from '../actions/types';
 
 const initialState = {
-  markdownText: "# This is a Header! \n" +
-    "## This is a sub-heading... \n" +
-    "Here is a [link](https://www.freecodecamp.com)  \n" +
-    "Here is a <a href='https://www.freecodecamp.com' target='_blank'>second link</a> that opens in a new tab!  \n" +
-    "Here is some code, `<div><p>Hello There!</p></div>`. \n" +
-    "```\n" +
-    "// Here is some multi-line code:\n" +
-    "function sum(a, b) { \n" +
-    "  return a + b; \n" +
-    "} \n" +
-    "``` \n" +
-    "- Here is a list \n" +
-    "  - Here is a list item \n" +
-    "   - Here is another \n" +
-    "   - and another \n\n" +
-    "> This is a Block Quote! \n\n" +
-    "![React Logo w/ Text](https://goo.gl/Umyytc) \n\n" +
-    "Here is **BOLDED** text! \n",
+  markdownText:
+`# This is a Header!
+## This is a sub-heading...
+Here is a [link](https://www.freecodecamp.com)
+Here is a <a href='https://www.freecodecamp.com' target='_blank'>second link</a> that opens in a new tab!
+Here is some code, \`<div><p>Hello There!</p></div>\`.
+\`\`\`
+// Here is some multi-line code:
+function sum(a, b) {
+  return a + b;
+}
+\`\`\`
+- Here is a list
+  - Here is a list item
+    - Here is another
+    - and another
+
+> This is a Block Quote!
+
+![React Logo w/ Text](https://goo.gl/Umyytc)
+Here is **BOLDED** text!`,
     editorViewClass: 'normal',
     previewViewClass: 'normal',
     editorHidden: '',
