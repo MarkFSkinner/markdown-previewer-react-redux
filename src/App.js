@@ -29,7 +29,6 @@ class App extends Component {
 
   updateEditor = (e) => {
     this.props.updateMarkdownText(e.target.value);
-    //this.updatePreviewer();
   }
 
   updatePreviewer = () => {
@@ -54,20 +53,6 @@ class App extends Component {
     const icon = (this.props.myData.icon === 'icon-fullscreen') ? 'icon-resize-small' : 'icon-fullscreen';
     this.props.updateIcon(icon);
   }
-
-  /*toggleEditorHidden = () => {
-    const result = (this.props.myData.editorHidden === '') ? 'hidden' : '';
-    this.props.updateEditorHidden(result);
-  }
-
-  togglePreviewHidden = () => {
-    const result = (this.props.myData.previewHidden === '') ? 'hidden' : '';
-    this.props.updatePreviewHidden(result);
-  }*/
-
-  /*replace = (text) => {
-    text.replace(/\r/gi, "<br>");
-  }*/
 
   render() {
     return (
