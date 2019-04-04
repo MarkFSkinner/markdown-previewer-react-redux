@@ -1,3 +1,11 @@
+# Markdown Previewer (React/Redux)
+
+Part of the freeCodeCamp front end developer curriculum
+
+See the requirements [here](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer/)
+
+Visit my web app [here!]()
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

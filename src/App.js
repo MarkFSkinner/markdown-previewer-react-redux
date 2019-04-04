@@ -18,11 +18,10 @@ import {
 } from './actions';
 
 marked.setOptions({
-  breaks: true,
+  breaks: true
 });
 
 class App extends Component {
-
   componentDidMount = () => {
     this.props.setPreview();
   }

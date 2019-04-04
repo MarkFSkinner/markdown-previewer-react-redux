@@ -32,11 +32,11 @@ function sum(a, b) {
 
 ![React Logo w/ Text](https://goo.gl/Umyytc)
 Here is **BOLDED** text!`,
-    editorViewClass: 'normal',
-    previewViewClass: 'normal',
-    editorHidden: '',
-    previewHidden: '',
-    icon: 'icon-fullscreen'
+  editorViewClass: 'normal',
+  previewViewClass: 'normal',
+  editorHidden: '',
+  previewHidden: '',
+  icon: 'icon-fullscreen'
 };
 
 export default function(state = initialState, action) {
